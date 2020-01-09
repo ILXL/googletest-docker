@@ -2,8 +2,10 @@ FROM ubuntu:18.04
 
 LABEL maintainer=matthieu@csu.fullerton.edu
 
-RUN apt-get update \
-  && apt-get install -y clang git make cmake
+RUN apt-get install -y clang
+RUN apt-get install -y git
+RUN apt-get install -y make
+RUN apt-get install -y cmake
 
 RUN cd /tmp/ \
   && git clone https://github.com/google/googletest.git \
